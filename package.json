@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start:7": "yarn build:7 && node dist.7/7-anagrams",
-    "build:7": "./node_modules/.bin/babel 7-anagrams.js --out-dir dist.7",
+    "build:7": "./node_modules/.bin/babel src/7-anagrams.js --out-dir dist.7",
     "start:6": "yarn build:6 && node dist.6/6-babel",
-    "build:6": "./node_modules/.bin/babel 6-babel.js --out-dir dist.6",
+    "watch:6": "./node_modules/.bin/babel src/6-babel.js --watch --out-dir dist.6",
+    "build:6": "./node_modules/.bin/babel src/6-babel.js --out-dir dist.6",
     "start:5:prod": "node ./dist.5/5-ts",
     "build:5": "tsc",
     "start:4": "node 4-ctx-proto",
