@@ -1,0 +1,49 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:7": "yarn build:7 && node dist.7/7-anagrams",
+    "build:7": "./node_modules/.bin/babel 7-anagrams.js --out-dir dist.7",
+    "start:6": "yarn build:6 && node dist.6/6-babel",
+    "build:6": "./node_modules/.bin/babel 6-babel.js --out-dir dist.6",
+    "start:5:prod": "node ./dist.5/5-ts",
+    "build:5": "tsc",
+    "start:4": "node 4-ctx-proto",
+    "start:3": "node 3-fibonacci",
+    "start:2": "node 2-this",
+    "start:1": "node 1-igatec-trash",
+    "lint": "eslint --debug src/**/*.{js*,ts*}",
+    "lint:fix": "eslint src/**/*.{js*,ts*} --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-syntax-optional-chaining": "^7.8.3",
+    "@babel/preset-env": "^7.11.0",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "core-js": "3.6.4"
+  }
+}
