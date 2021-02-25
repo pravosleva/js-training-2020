@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:8": "yarn build:8 && node dist.8/8-fetcher",
+    "build:8": "./node_modules/.bin/babel src/8-fetcher.js --out-dir dist.8",
     "start:7": "yarn build:7 && node dist.7/7-anagrams",
     "build:7": "./node_modules/.bin/babel src/7-anagrams.js --out-dir dist.7",
     "start:6": "yarn build:6 && node dist.6/6-babel",
@@ -11,10 +13,10 @@
     "build:6": "./node_modules/.bin/babel src/6-babel.js --out-dir dist.6",
     "start:5:prod": "node ./dist.5/5-ts",
     "build:5": "tsc",
-    "start:4": "node 4-ctx-proto",
-    "start:3": "node 3-fibonacci",
-    "start:2": "node 2-this",
-    "start:1": "node 1-igatec-trash",
+    "start:4": "node src/4-ctx-proto",
+    "start:3": "node src/3-fibonacci",
+    "start:2": "node src/2-this",
+    "start:1": "node src/1-igatec-trash",
     "lint": "eslint --debug src/**/*.{js*,ts*}",
     "lint:fix": "eslint src/**/*.{js*,ts*} --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -45,6 +47,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
+    "axios": "^0.21.0",
     "core-js": "3.6.4"
   }
 }
