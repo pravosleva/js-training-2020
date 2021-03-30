@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:9": "node src/9-arrs",
     "start:8": "yarn build:8 && node dist.8/8-fetcher",
     "build:8": "./node_modules/.bin/babel src/8-fetcher.js --out-dir dist.8",
     "start:7": "yarn build:7 && node dist.7/7-anagrams",
