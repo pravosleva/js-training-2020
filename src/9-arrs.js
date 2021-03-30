@@ -23,20 +23,20 @@ const f = (arr1, arr2) => {
 }
 
 const f2 = (arr1, arr2) => {
+  // Отмечаем необходимые элементы (используется при переборе основного массива)
   const reducer1 = (state, cur) => {
-    state.set(cur, false) // Отмечаем необходимые элементы
+    state.set(cur, false)
     return state
   }
+
+  // Подтверждаем каждый элемент (используется при сверке с основным массивом)
   const reducer2 = (state, cur) => {
-    if (state.has(cur)) state.set(cur, true) // Подтверждаем каждый элемент
+    if (state.has(cur)) state.set(cur, true)
     return state
   }
   const state = new Map()
   const step1 = arr2.reduce(reducer1, state)
-  // console.log(res1)
-
   const step2 = arr1.reduce(reducer2, state)
-  // console.log(res2)
 
   for (const val of step2.entries()) if (!val[1]) return false
 
