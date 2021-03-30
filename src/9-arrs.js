@@ -38,7 +38,7 @@ const f2 = (arr1, arr2) => {
   const step1 = arr2.reduce(reducer1, state)
   const step2 = arr1.reduce(reducer2, state)
 
-  for (const val of step2.entries()) if (!val[1]) return false
+  for (const entry of step2.entries()) if (!entry[1]) return false
 
   return true
 }
