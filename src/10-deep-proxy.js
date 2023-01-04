@@ -79,6 +79,7 @@ class DeepProxy {
 
 const proxiedState = new DeepProxy(state, {
   set(target, path, value, receiver) {
+    console.log(target, path, value, receiver)
     console.log('set', path.join('.'), '=', JSON.stringify(value))
   },
 

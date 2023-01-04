@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:11": "node src/11-mm-objects",
+    "watch:11": "./node_modules/.bin/babel src/6-babel.js --watch --out-dir dist.11",
     "start:10": "node src/10-deep-proxy",
     "start:9": "node src/9-arrs",
     "start:8": "yarn build:8 && node dist.8/8-fetcher",
